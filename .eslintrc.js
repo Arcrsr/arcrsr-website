@@ -59,7 +59,7 @@ module.exports = {
             {
                 pathGroups: [
                     {
-                        pattern: '@/**',
+                        pattern: '@site/**',
                         group: 'external',
                         position: 'after',
                     },
