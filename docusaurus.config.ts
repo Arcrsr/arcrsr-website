@@ -2,7 +2,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
-const config: Config = {
+export default {
     title: 'Arcrsr的小站',
     tagline: 'Dinosaurs are cool',
     favicon: 'img/favicon.ico',
@@ -128,6 +128,4 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
-};
-
-export default config;
+} satisfies Config;
