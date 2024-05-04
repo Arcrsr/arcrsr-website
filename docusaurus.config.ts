@@ -127,5 +127,11 @@ export default {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
         },
+        docs: {
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: true,
+            },
+        },
     } satisfies Preset.ThemeConfig,
 } satisfies Config;
