@@ -30,7 +30,7 @@ module.exports = {
         'at-rule-no-unknown': [
             true,
             {
-                ignoreAtRules: ['layer', 'apply', 'screen', 'define-mixin', 'mixin'],
+                ignoreAtRules: ['layer', 'apply', 'screen', 'define-mixin', 'mixin', 'tailwind'],
             },
         ],
 
@@ -54,6 +54,12 @@ module.exports = {
                     'global',
                     'local',
                 ],
+            },
+        ],
+        'function-no-unknown': [
+            true,
+            {
+                ignoreFunctions: ['color-mod', 'shade', 'tint'],
             },
         ],
         'rule-empty-line-before': [

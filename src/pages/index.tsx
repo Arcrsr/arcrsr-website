@@ -4,14 +4,14 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 
-import clsx from 'clsx';
+import cn from '../utils/cn';
 
 import styles from './index.module.css';
 
 const HomepageHeader = () => {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <header className={cn('hero hero--primary', styles.heroBanner)}>
             <div className="container">
                 <Heading as="h1" className="hero__title">
                     {siteConfig.title}

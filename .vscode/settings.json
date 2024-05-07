@@ -13,7 +13,5 @@
     },
     "stylelint.snippet": ["css", "scss", "less", "postcss"],
     "stylelint.validate": ["css", "scss", "less", "postcss"],
-    "javascript.preferences.importModuleSpecifier": "project-relative",
-    "typescript.suggest.jsdoc.generateReturns": false,
     "stylelint.packageManager": "pnpm"
 }

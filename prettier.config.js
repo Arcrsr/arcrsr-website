@@ -5,6 +5,7 @@ module.exports = {
     proseWrap: 'never',
     tabWidth: 4,
     htmlWhitespaceSensitivity: 'strict',
+    plugins: ['prettier-plugin-tailwindcss'],
     overrides: [
         {
             files: '*.md',

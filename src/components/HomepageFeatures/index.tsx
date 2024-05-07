@@ -2,9 +2,10 @@ import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountai
 import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg';
 import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
 import Heading from '@theme/Heading';
-import clsx from 'clsx';
 
 import React, { ComponentProps, ComponentType } from 'react';
+
+import cn from '../../utils/cn';
 
 import styles from './styles.module.css';
 
@@ -48,7 +49,7 @@ const FeatureList: FeatureItem[] = [
 ];
 
 const Feature = ({ title, Svg, description }: FeatureItem) => (
-    <div className={clsx('col col--4')}>
+    <div className={cn('col col--4')}>
         <div className="text--center">
             <Svg className={styles.featureSvg} role="img" />
         </div>
