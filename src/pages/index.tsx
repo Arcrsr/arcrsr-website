@@ -1,40 +1,62 @@
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountain.svg';
+import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
 import Layout from '@theme/Layout';
 
-import cn from '../utils/cn';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
 import styles from './index.module.css';
 
-const HomepageHeader = () => {
-    const { siteConfig } = useDocusaurusContext();
-    return (
-        <header className={cn('hero hero--primary', styles.heroBanner)}>
-            <div className="container">
-                <Heading as="h1" className="hero__title">
-                    {siteConfig.title}
-                </Heading>
-                <p className="hero__subtitle">{siteConfig.tagline}</p>
-                <div className={styles.buttons}>
-                    <Link className="button button--secondary button--lg" to="/docs/intro">
-                        Docusaurus Tutorial - 5min ⏱️
-                    </Link>
-                </div>
-            </div>
-        </header>
-    );
+type FeatureProps = {
+    Svg: ComponentType<ComponentProps<'svg'>>;
+    title: ReactNode;
+    description: ReactNode;
 };
 
+const Feature = ({ Svg, title, description }: FeatureProps) => (
+    <div>
+        <Svg className={styles.featureSvg} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+);
+
+const features: FeatureProps[] = [
+    {
+        Svg: undrawDocusaurusMountain,
+        title: 'Easy to Use',
+        description:
+            'Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.',
+    },
+    {
+        Svg: undrawDocusaurusTree,
+        title: 'Focus on What Matters',
+        description: (
+            <>
+                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and
+                move your <code>docs</code> into the docs directory.
+            </>
+        ),
+    },
+    {
+        Svg: undrawDocusaurusTree,
+        title: 'Powered by React',
+        description:
+            'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.',
+    },
+];
+
 const Home = () => (
-    <Layout
-        title="Home"
-        description="是一个由Arcrsr创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。"
-    >
-        <HomepageHeader />
+    <Layout title="Playground" description="测试">
         <main>
-            <HomepageFeatures />
+            <header className={styles.header}>
+                <h1>Arcrsr的小站</h1>
+                <p>记录工作生活中的点滴，分享心得体会</p>
+            </header>
+            <section className={styles.featureSection}>
+                {features.map((feature) => (
+                    <Feature {...feature} />
+                ))}
+            </section>
         </main>
     </Layout>
 );

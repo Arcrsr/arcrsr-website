@@ -72,7 +72,7 @@ export default {
                 },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
-                    href: 'https://github.com/Arcrsr/arcrsr-website',
+                    href: 'https://github.com/Arcrsr',
                     label: 'GitHub',
                     position: 'right',
                 },

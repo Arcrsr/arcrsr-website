@@ -64,3 +64,7 @@
     );
     --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
 }
+
+* {
+    font-family: inherit;
+}

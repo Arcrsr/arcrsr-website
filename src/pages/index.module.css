@@ -1,23 +1,49 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 64px;
+    background-color: var(--ifm-color-primary);
 
-.heroBanner {
-    position: relative;
-    padding: 4rem 0;
-    overflow: hidden;
-    text-align: center;
-}
+    @media (--ifm-narrow-window) {
+        padding: 32px;
+    }
 
-@media screen and (max-width: 996px) {
-    .heroBanner {
-        padding: 2rem;
+    & > h1 {
+        font-size: 3rem;
+        color: var(--ifm-font-color-base-inverse);
+        text-align: center;
+    }
+
+    & > p {
+        font-size: 1.5rem;
+        color: var(--ifm-font-color-base-inverse);
+        text-align: center;
     }
 }
 
-.buttons {
+.featureSection {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    max-width: 1280px;
+    padding-block: 32px;
+    margin-inline: auto;
+
+    & > * {
+        flex: 1 0 0%;
+        padding-inline: 16px;
+        text-align: center;
+
+        @media (--ifm-narrow-window) {
+            min-width: 100%;
+        }
+    }
 }
+
+.featureSvg {
+    width: 200px;
+    height: 200px;
+}
+
+@custom-media --ifm-narrow-window (max-width: 996px);
