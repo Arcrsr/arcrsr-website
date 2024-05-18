@@ -1,5 +1,6 @@
 import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountain.svg';
 import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
+import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg'
 import Layout from '@theme/Layout';
 
 import { ComponentProps, ComponentType, ReactNode } from 'react';
@@ -38,7 +39,7 @@ const features: FeatureProps[] = [
         ),
     },
     {
-        Svg: undrawDocusaurusTree,
+        Svg: undrawDocusaurusReact,
         title: 'Powered by React',
         description:
             'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.',
@@ -46,7 +47,10 @@ const features: FeatureProps[] = [
 ];
 
 const Home = () => (
-    <Layout title="Playground" description="测试">
+    <Layout
+        title="Home"
+        description="是一个由Arcrsr创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。"
+    >
         <main>
             <header className={styles.header}>
                 <h1>Arcrsr的小站</h1>
