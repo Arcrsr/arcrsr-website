@@ -1,6 +1,6 @@
 import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountain.svg';
+import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg';
 import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
-import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg'
 import Layout from '@theme/Layout';
 
 import { ComponentProps, ComponentType, ReactNode } from 'react';
