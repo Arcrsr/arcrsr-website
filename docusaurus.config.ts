@@ -4,11 +4,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 export default {
     title: 'Arcrsr的小站',
-    tagline: 'Dinosaurs are cool',
+    tagline: '记录工作生活中的点滴，分享我的心得体会。欢迎光临，让我们共同进步！',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-site.example.com',
+    url: 'https://arcrsr.com',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -25,8 +25,8 @@ export default {
     // useful metadata like html lang. For example, if your site is Chinese, you
     // may want to replace "en" with "zh-Hans".
     i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
+        defaultLocale: 'zh',
+        locales: ['zh'],
     },
 
     presets: [
@@ -58,21 +58,22 @@ export default {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'Home',
             logo: {
                 alt: 'My Site Logo',
                 src: 'img/logo.jpg',
             },
             items: [
+                { to: '/blog', label: '博客', position: 'left' },
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Docs',
+                    label: '笔记',
                 },
-                { to: '/blog', label: 'Blog', position: 'left' },
+                { to: '/projects', label: '项目', position: 'left' },
+                { to: '/about', label: '关于我', position: 'right' },
                 {
-                    href: 'https://github.com/Arcrsr',
+                    href: 'https://github.com/Arcrsr/arcrsr-website',
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -82,41 +83,47 @@ export default {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: '工作与生活',
                     items: [
                         {
-                            label: 'Tutorial',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
-                    title: 'Community',
-                    items: [
-                        {
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                        },
-                        {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus',
-                        },
-                        {
-                            label: 'Twitter',
-                            href: 'https://twitter.com/docusaurus',
-                        },
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
-                            label: 'Blog',
+                            label: '博客',
                             to: '/blog',
                         },
                         {
+                            label: '笔记',
+                            to: '/docs',
+                        },
+                        {
+                            label: '项目',
+                            to: '/projects',
+                        },
+                    ],
+                },
+                {
+                    title: '社交媒体',
+                    items: [
+                        {
+                            label: '微信',
+                            to: '/img/wechat.jpg',
+                            target: '_blank',
+                        },
+                        {
+                            label: 'QQ',
+                            href: '/img/qq.jpg',
+                            target: '_blank',
+                        },
+                        {
                             label: 'GitHub',
-                            href: 'https://github.com/facebook/docusaurus',
+                            href: 'https://github.com/Arcrsr',
+                        },
+                    ],
+                },
+                {
+                    title: '更多',
+                    items: [
+                        {
+                            label: '关于我',
+                            to: '/about',
                         },
                     ],
                 },

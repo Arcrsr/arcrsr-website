@@ -1,24 +1,45 @@
 @custom-media --ifm-narrow-window (max-width: 996px);
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: 64px;
+    padding: 64px;
     color: var(--ifm-font-color-base-inverse);
-    text-align: center;
     background-color: var(--ifm-color-primary);
+
+    .headerBackground {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin-inline: auto;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & > svg {
+            width: 380px;
+            height: 300px;
+        }
+
+        & h1 {
+            font-size: 3rem;
+        }
+
+        & p {
+            max-width: 500px;
+            font-size: 1.5rem;
+        }
+
+        @media (--ifm-narrow-window) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
 
     @media (--ifm-narrow-window) {
         padding: 32px;
-    }
-
-    & > h1 {
-        font-size: 3rem;
-    }
-
-    & > p {
-        font-size: 1.5rem;
+        text-align: center;
     }
 }
 

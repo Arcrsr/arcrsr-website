@@ -1,11 +1,12 @@
-import undrawDocusaurusMountain from '@site/static/img/undraw_docusaurus_mountain.svg';
-import undrawDocusaurusReact from '@site/static/img/undraw_docusaurus_react.svg';
-import undrawDocusaurusTree from '@site/static/img/undraw_docusaurus_tree.svg';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-
 import { ComponentProps, ComponentType, ReactNode } from 'react';
 
+import devtools from './devtools.svg';
+import Hero from './hero.svg';
 import styles from './index.module.css';
+import skills from './skills.svg';
+import thinking from './thinking.svg';
 
 type FeatureProps = {
     Svg: ComponentType<ComponentProps<'svg'>>;
@@ -23,46 +24,49 @@ const Feature = ({ Svg, title, description }: FeatureProps) => (
 
 const features: FeatureProps[] = [
     {
-        Svg: undrawDocusaurusMountain,
-        title: 'Easy to Use',
-        description:
-            'Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.',
+        Svg: skills,
+        title: 'TypeScript全栈转型中',
+        description: 'NestJs+React技术栈，力求能独立完成中小型网站，app，小程序的设计与开发',
     },
     {
-        Svg: undrawDocusaurusTree,
-        title: 'Focus on What Matters',
-        description: (
-            <>
-                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and
-                move your <code>docs</code> into the docs directory.
-            </>
-        ),
+        Svg: devtools,
+        title: '开发环境折腾爱好者',
+        description:
+            'windows，mac和linux三系统使用者，热衷于terminal，neovim和vscode插件配置的打磨，畅享丝滑的开发流程，让编程变成一种享受',
     },
     {
-        Svg: undrawDocusaurusReact,
-        title: 'Powered by React',
-        description:
-            'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.',
+        Svg: thinking,
+        title: '人生随想与感悟',
+        description: '工作并不是全部，思考人与人之间的关系，审视自身，做一个更加通透的人',
     },
 ];
 
-const Home = () => (
-    <Layout
-        title="Home"
-        description="是一个由Arcrsr创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。"
-    >
-        <main>
-            <header className={styles.header}>
-                <h1>Arcrsr的小站</h1>
-                <p>记录工作生活中的点滴，分享心得体会</p>
-            </header>
-            <section className={styles.featureSection}>
-                {features.map((feature) => (
-                    <Feature {...feature} />
-                ))}
-            </section>
-        </main>
-    </Layout>
-);
+const Home = () => {
+    const { siteConfig } = useDocusaurusContext();
+
+    return (
+        <Layout
+            title="Home"
+            description="是一个由Arcrsr创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。"
+        >
+            <main>
+                <header className={styles.header}>
+                    <div className={styles.headerBackground}>
+                        <div>
+                            <h1>{siteConfig.title}</h1>
+                            <p>{siteConfig.tagline}</p>
+                        </div>
+                        <Hero />
+                    </div>
+                </header>
+                <section className={styles.featureSection}>
+                    {features.map((feature) => (
+                        <Feature {...feature} />
+                    ))}
+                </section>
+            </main>
+        </Layout>
+    );
+};
 
 export default Home;
