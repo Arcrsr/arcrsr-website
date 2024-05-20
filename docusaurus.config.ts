@@ -70,7 +70,7 @@ export default {
                     position: 'left',
                     label: '笔记',
                 },
-                { to: '/projects', label: '项目', position: 'left' },
+                { to: '/project', label: '项目', position: 'left' },
                 { to: '/about', label: '关于我', position: 'right' },
                 {
                     href: 'https://github.com/Arcrsr/arcrsr-website',
@@ -95,7 +95,7 @@ export default {
                         },
                         {
                             label: '项目',
-                            to: '/projects',
+                            to: '/project',
                         },
                     ],
                 },

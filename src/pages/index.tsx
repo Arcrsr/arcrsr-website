@@ -37,7 +37,8 @@ const features: FeatureProps[] = [
     {
         Svg: thinking,
         title: '人生随想与感悟',
-        description: '工作并不是全部，思考人与人之间的关系，审视自身，做一个更加通透的人',
+        description:
+            '工作并不是全部，还要关注生活的点滴，思考人与人之间的关系，审视自身，做一个更加通透的人',
     },
 ];
 
