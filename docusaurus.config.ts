@@ -4,7 +4,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 export default {
     title: 'Arcrsr的小站',
-    tagline: '记录工作生活中的点滴，分享我的心得体会。欢迎光临，让我们共同进步！',
+    tagline:
+        '记录工作生活中的点滴，分享我的心得体会。欢迎光临，让我们共同进步！',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here

@@ -17,13 +17,21 @@
     --ifm-contrast-background-dark-value: 70%;
     --ifm-contrast-foreground-dark-value: 90%;
     --ifm-color-primary: #2e8555;
-    --ifm-color-primary-dark: color-mod(var(--ifm-color-primary) shade(var(--ifm-dark-value)));
-    --ifm-color-primary-darker: color-mod(var(--ifm-color-primary) shade(var(--ifm-darker-value)));
+    --ifm-color-primary-dark: color-mod(
+        var(--ifm-color-primary) shade(var(--ifm-dark-value))
+    );
+    --ifm-color-primary-darker: color-mod(
+        var(--ifm-color-primary) shade(var(--ifm-darker-value))
+    );
     --ifm-color-primary-darkest: color-mod(
         var(--ifm-color-primary) shade(var(--ifm-darkest-value))
     );
-    --ifm-color-primary-light: color-mod(var(--ifm-color-primary) tint(var(--ifm-light-value)));
-    --ifm-color-primary-lighter: color-mod(var(--ifm-color-primary) tint(var(--ifm-lighter-value)));
+    --ifm-color-primary-light: color-mod(
+        var(--ifm-color-primary) tint(var(--ifm-light-value))
+    );
+    --ifm-color-primary-lighter: color-mod(
+        var(--ifm-color-primary) tint(var(--ifm-lighter-value))
+    );
     --ifm-color-primary-lightest: color-mod(
         var(--ifm-color-primary) tint(var(--ifm-lightest-value))
     );
@@ -40,18 +48,27 @@
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 :root[data-theme='dark'] {
     --ifm-color-primary: #25c2a0;
-    --ifm-color-primary-dark: color-mod(var(--ifm-color-primary) shade(var(--ifm-dark-value)));
-    --ifm-color-primary-darker: color-mod(var(--ifm-color-primary) shade(var(--ifm-darker-value)));
+    --ifm-color-primary-dark: color-mod(
+        var(--ifm-color-primary) shade(var(--ifm-dark-value))
+    );
+    --ifm-color-primary-darker: color-mod(
+        var(--ifm-color-primary) shade(var(--ifm-darker-value))
+    );
     --ifm-color-primary-darkest: color-mod(
         var(--ifm-color-primary) shade(var(--ifm-darkest-value))
     );
-    --ifm-color-primary-light: color-mod(var(--ifm-color-primary) tint(var(--ifm-light-value)));
-    --ifm-color-primary-lighter: color-mod(var(--ifm-color-primary) tint(var(--ifm-lighter-value)));
+    --ifm-color-primary-light: color-mod(
+        var(--ifm-color-primary) tint(var(--ifm-light-value))
+    );
+    --ifm-color-primary-lighter: color-mod(
+        var(--ifm-color-primary) tint(var(--ifm-lighter-value))
+    );
     --ifm-color-primary-lightest: color-mod(
         var(--ifm-color-primary) tint(var(--ifm-lightest-value))
     );
     --ifm-color-primary-contrast-background: color-mod(
-        var(--ifm-color-primary) shade(var(--ifm-contrast-background-dark-value))
+        var(--ifm-color-primary)
+            shade(var(--ifm-contrast-background-dark-value))
     );
     --ifm-color-primary-contrast-foreground: color-mod(
         var(--ifm-color-primary) tint(var(--ifm-contrast-foreground-dark-value))

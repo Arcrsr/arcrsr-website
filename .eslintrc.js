@@ -120,10 +120,16 @@ module.exports = {
         'react/static-property-placement': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/require-default-props': 'off',
-        'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            'warn',
+            { extensions: ['.jsx', '.tsx'] },
+        ],
         'react/function-component-definition': [
             'error',
-            { namedComponents: 'arrow-function', unnamedComponents: 'arrow-function' },
+            {
+                namedComponents: 'arrow-function',
+                unnamedComponents: 'arrow-function',
+            },
         ],
         'react/no-array-index-key': 'off',
         'react-hooks/exhaustive-deps': 'off',

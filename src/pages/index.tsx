@@ -26,7 +26,8 @@ const features: FeatureProps[] = [
     {
         Svg: skills,
         title: 'TypeScript全栈转型中',
-        description: 'NestJs+React技术栈，力求能独立完成中小型网站，app，小程序的设计与开发',
+        description:
+            'NestJs+React技术栈，力求能独立完成中小型网站，app，小程序的设计与开发',
     },
     {
         Svg: devtools,
